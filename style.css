@@ -1,0 +1,152 @@
+:root {
+    --bg-color: hsl(217, 19%, 35%);
+    --card-color: hsl(212, 23%, 69%);
+    --card-title: hsl(214, 17%, 51%);
+    --card-bg: hsl(210, 46%, 95%);
+}
+
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    line-height: 1.7;
+}
+main {
+    width: inherit;
+    min-height: inherit;
+    background-color: var(--card-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--card-color);
+}
+button {
+    cursor: pointer;
+}
+.forward-btn {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+.card {
+    /* f/u clm in reposcc */
+    width: 90%;
+    max-width: 400px;
+    min-height: 80vh;
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+.hero-wraper {
+    flex-grow: 3;
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hero-profile {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1.1rem;
+}
+.hero-text p:first-of-type {
+    font-weight: 700;
+    font-size: 1.17rem;
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
+    color: var(--card-title);
+}
+.avatar {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1.3rem;
+}
+.name {
+    color: var(--card-title);
+    font-weight: 700;
+    font-size: 1rem;
+}
+.profile-data {
+    display:flex;
+    align-items: center;
+}
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    padding: 1.1rem;
+    margin-top: 1rem;
+}
+.links-wraper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+}
+.links-wraper img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.links-wraper p:first-of-type {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.hide {
+    display:none;
+}
+.show {
+    display: block;
+}
+@media screen and (min-width: 1440px) {
+    .card {
+        width: 100%;
+        max-width: 1000px;
+        min-height: 100%;
+        max-height: 400px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 80px);
+    }
+    .image-container {
+        grid-column: 1 / 3;
+        grid-row: 1 / 6;
+    }
+    .hero-wraper {
+        grid-column: 3 / 6;
+        grid-row: 1 / 5;
+    }
+    .hero-profile {
+        grid-column: 3 / 6;
+        grid-row: 5 / 6;
+    }
+    .hero-text p:first-of-type {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+}
